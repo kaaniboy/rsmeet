@@ -1,0 +1,20 @@
+#main-container > a {
+    margin-right: 20px;
+}
+
+body {
+    padding-top: 30px;
+    background-image: url('../img/background.png');
+}
+
+#submit-search {
+    margin-left: 15px;
+}
+
+#submit-post {
+    margin-left: 15px;
+}
+
+.larger {
+	font-size: 115%;
+}
