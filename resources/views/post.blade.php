@@ -9,14 +9,23 @@
                 {{ $post->title }}
             </h4>
 
-        	<b>Posted by {{ $post->name }} {!! \Carbon\Carbon::createFromTimeStamp(strtotime($post->created_at))->diffForHumans() !!}</b>
+        	<b>Posted by 
+                <a title="View player's highscores" href="http://services.runescape.com/m=hiscore_oldschool/hiscorepersonal.ws?user1={{ $post->name }}">
+                    {{ $post->name }}
+                </a> 
+                {!! \Carbon\Carbon::createFromTimeStamp(strtotime($post->created_at))->diffForHumans() !!}</b>
         	<br>
             <br>
         	<p class="larger">{{ $post->description }}</p>
 
             <hr>
 
-            <p>Think you've found a match? Add <b>"{{ $post->name }}"</b> to your friends-list in game and send a message!
+            <p>Think you've found a match? Add 
+                <a title="View player's highscores" href="http://services.runescape.com/m=hiscore_oldschool/hiscorepersonal.ws?user1={{ $post->name }}">
+                    <b>"{{ $post->name }}"</b>
+                </a>
+                to your friends-list in game and send a message!
+            </p>
 
         </div>
     </div>

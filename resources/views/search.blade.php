@@ -20,7 +20,7 @@
                         </div>
                 </div>
                 
-                <div id="extras" aria-expanded="false" class="collapse" style="height: 0px;">
+                <div id="extras" aria-expanded="{{ $form_expanded }}" class="collapse {{ $form_expanded ? 'in' : '' }}">
                     
                     <div class="form-group">
                     <label for="combat" class="col-lg-1 control-label">Combat Level</label>

@@ -42,6 +42,8 @@ class PostController extends Controller
     
     public function search(Request $request)
     {
+        $form_expanded = false;
+
         $filter = $request->input('filter');
         $category = $request->input('category');
         $combat = $request->input('combat');
@@ -64,10 +66,12 @@ class PostController extends Controller
         
         if($combat != 'Any' && $combat != NULL) {
             $query = $query->where('combat', '=', $combat);
+            $form_expanded = true;
         }
         
         if($age != 'Any' && $age != NULL) {
             $query = $query->where('age', '=', $age);
+            $form_expanded = true;
         }
 
         $query = $query->orderBy('created_at', 'asc');
@@ -78,7 +82,7 @@ class PostController extends Controller
                              ->with('categories', $this->categories)
                              ->with('combats', $this->combats)
                              ->with('ages', $this->ages)
-                             ->with('query', $query->toSql());
+                             ->with('form_expanded', $form_expanded);
     }
     
     public function create()
