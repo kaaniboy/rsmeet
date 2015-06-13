@@ -13,9 +13,16 @@
                 <a title="View player's highscores" href="http://services.runescape.com/m=hiscore_oldschool/hiscorepersonal.ws?user1={{ $post->name }}">
                     {{ $post->name }}
                 </a> 
-                {!! \Carbon\Carbon::createFromTimeStamp(strtotime($post->created_at))->diffForHumans() !!}</b>
+                {!! \Carbon\Carbon::createFromTimeStamp(strtotime($post->created_at))->diffForHumans() !!}
+            </b>
+
+            <h5>
+                <span class="label label-primary">Category: {{ $post->category }}</span>
+                <span class="label label-success">Combat: {{ $post->combat }}</span>
+                <span class="label label-info">Age: {{ $post->age }}</span>
+            </h5>
+            
         	<br>
-            <br>
         	<p class="larger">{{ $post->description }}</p>
 
             <hr>
