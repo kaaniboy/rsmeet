@@ -52,12 +52,13 @@ class PostController extends Controller
         $query = DB::table('posts');
         
         if($filter != '' && $filter != NULL) {
-            $query = $query->where(function($query) use(&$filter)
+            /*$query = $query->where(function($query) use(&$filter)
             {
                 $query->where('title', 'like', '%' . $filter . '%')
                       ->orWhere('description', 'like', '%' . $filter . '%');
-            });
+            });*/
 
+            $query = Post::search($filter);
         }
 
         if($category != 'Any' && $category != NULL) {
@@ -74,7 +75,7 @@ class PostController extends Controller
             $form_expanded = true;
         }
 
-        $query = $query->orderBy('created_at', 'asc');
+        //$query = $query->orderBy('created_at', 'asc');
         $posts = $query->paginate(2);
         $posts->setPath('');
         

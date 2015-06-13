@@ -10,7 +10,7 @@
                 <h4>Create a post</h4>
                 
                 <p class="larger">
-                    Describe the activity you would like to participate in carefully so you can quickly meet other players. If you don't care about a
+                    Describe the activity you would like to participate in so you can quickly meet other players. If you don't care about a
                     certain option, leave 'Any' selected. Also, make sure to have your <b>private chat enabled in-game</b> so that you can receive messages from
                     players using RS Meet. 
                 </p>

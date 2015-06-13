@@ -11,7 +11,7 @@
                 the same activities as you do.
             </p>
             <p class="larger">
-                I quickly built this website over a few days, so it is likely that you will encounter some errors. If you do, please send a message to my reddit account,
+                If you encounter any issues or have any recommendations for the site, please send a message to my reddit account,
                 <b>/u/yolodysseus</b>, so that I can resolve it as soon as possible.
             </p>
             <p class="larger">
